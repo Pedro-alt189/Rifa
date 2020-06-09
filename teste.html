@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt_BR">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .available {
+            background-color: #b77f72;
+            text-align: center;
+            border: 2px;
+            border-radius: 5px;
+            border-color: black;
+            border-style: solid;
+            padding: 10px;
+            margin-top: 12px;
+        }
+
+        .selled {
+            background-color: #EAE45E;
+            text-align: center;
+            border: 2px;
+            border-radius: 5px;
+            border-color: black;
+            border-style: solid;
+            padding: 10px;
+            margin-top: 12px;
+        }
+
+        .label-indicator {
+            margin-right: 0px;
+            padding: 0px;
+        }
+    </style>
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col col-lg-2">
+                <div class="row">
+                    <div class="col">
+                        <div class="available"></div>
+                    </div>
+                    <div class="col label-indicator">
+                        <label id="number-available">Disponível (YYY)</label>  
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-auto"></div>
+            <div class="col col-lg-2">
+                <div class="row">
+                    <div class="col">
+                        <div class="selled"></div>
+                    </div>
+                    <div class="col label-indicator">
+                        <label id="number-selled">Vendido (XXX)</label>  
+                    </div>
+                </div>
+            </div>
+          </div>
+
+        <div id="numbers">
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        function pad (str, max) {
+            str = str.toString();
+            return str.length < max ? pad("0" + str, max) : str;
+        }
+
+        $(document).ready(function() {
+            var lines = 1000;
+            var columns = 12;
+            var count = -1;
+            var maxCount = 999;
+
+            var selled = 0;
+            var available = 0;
+
+            for (let i = 0; i < lines; i++) {
+                var $newRow = $( "<div id='row" + i + "' class='row'></div>" );
+                for (let j = 0; j < columns; j++) {
+                    count += 1;
+                    $newRow.append("<div class='col'><div class='available'>" + pad(count, 3) + "</div></div>");   
+                    if (count >= maxCount) {
+                        $("#numbers").append($newRow);
+                        break;
+                    }
+                }
+                if (count >= maxCount) {
+                    break;
+                } else {
+                    $("#numbers").append($newRow);
+                }
+            }
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>jhowrifas</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/business-casual.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <style>
+    #rifa {
+      color: white;
+    }
+    .available {
+        background-color: #b77f72;
+        text-align: center;
+        border: 2px;
+        border-radius: 5px;
+        border-color: black;
+        border-style: solid;
+        padding: 10px;
+        margin-top: 12px;
+    }
+
+    .selled {
+        background-color: #EAE45E;
+        text-align: center;
+        border: 2px;
+        border-radius: 5px;
+        border-color: black;
+        border-style: solid;
+        padding: 10px;
+        margin-top: 12px;
+    }
+
+    .label-indicator {
+        margin-right: 0px;
+        padding: 0px;
+    }
+
+    ul {
+      list-style:none;
+    }
+
+    /* line 88, ../../Arafath/CL/December/233. Startup/HTML/scss/_footer.scss */
+.footer .socail_links ul li a {
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+  background: transparent;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  line-height: 40px !important;
+  margin-right: 7px;
+  color: #E7F9F9;
+  line-height: 40px !important;
+  border: 1px solid #E7F9F9;
+  font-size: 14px;
+}
+
+/* line 102, ../../Arafath/CL/December/233. Startup/HTML/scss/_footer.scss */
+.footer .socail_links ul li a:hover {
+  color: #fff !important;
+  background: #615CFD;
+  border: 1px solid #615CFD;
+}
+</style>
+
+</head>
+
+<body>
+
+  <h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-upper text-primary mb-3">Jhow Rifas</span>
+    <span class="site-heading-lower">Sorteios</span>
+  </h1>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start Bootstrap</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item active px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="index.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="sobre.html">Sobre Nós</a>
+          </li>
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="contato.html">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/carro.jpg" alt="">
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4">
+            <span class="section-heading-upper">Prémio</span>
+            <span class="section-heading-lower">Ford K</span>
+          </h2>
+          <p class="mb-3">Uma rifa online para você concorrer a diversos prémios, está rifa de 200 números estará valendo um ford K(2018) completo com som e tunado - venha concorrer!
+          </p>
+          <div class="intro-button mx-auto">
+            <a class="btn btn-primary btn-xl" href="#rifa">Compre um número!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container" id="rifa">
+    <div class="row justify-content-md-center">
+        <div class="col col-lg-2">
+            <div class="row">
+                <div class="col">
+                    <div class="available"></div>
+                </div>
+                <div class="col label-indicator">
+                    <label id="number-available">Disponível (YYY)</label>  
+                </div>
+            </div>
+        </div>
+        <div class="col-md-auto"></div>
+        <div class="col col-lg-2">
+            <div class="row">
+                <div class="col">
+                    <div class="selled"></div>
+                </div>
+                <div class="col label-indicator">
+                    <label id="number-selled">Vendido (XXX)</label>  
+                </div>
+            </div>
+        </div>
+      </div>
+
+
+    <div id="numbers">
+
+    </div>
+  </div><br>
+
+
+  <footer class="footer text-faded text-center py-5">
+    <div class="container">
+      <div class="col-lg-3 col-md-12">
+        <div class="socail_links">
+            <ul>
+                <li><a class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" href="https://www.facebook.com/JhoonataSaantos"> <i class="fa fa-facebook"></i> </a></li>
+                <li><a class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s" href=""> <i class="fa fa-instagram"></i> </a></li>
+                <li><a class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s" href="mailto:"> <i class="fa fa-envelope"></i> </a></li>
+            </ul>
+        </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function pad (str, max) {
+        str = str.toString();
+        return str.length < max ? pad("0" + str, max) : str;
+    }
+
+    $(document).ready(function() {
+        var lines = 1000;
+        var columns = 12;
+        var count = -1;
+        var maxCount = 999;
+
+        var selled = 0;
+        var available = 0;
+
+        for (let i = 0; i < lines; i++) {
+            var $newRow = $( "<div id='row" + i + "' class='row'></div>" );
+            for (let j = 0; j < columns; j++) {
+                count += 1;
+                $newRow.append("<div class='col'><div class='available'>" + pad(count, 3) + "</div></div>");   
+                if (count >= maxCount) {
+                    $("#numbers").append($newRow);
+                    break;
+                }
+            }
+            if (count >= maxCount) {
+                break;
+            } else {
+                $("#numbers").append($newRow);
+            }
+        }
+
+      
+
+        //TODO fazer clique do botao
+        $(".available").click(function(e) {
+          function exibir(number) {
+        
+    }
+ 
+    
+        });
+
+
+    });
+</script>
+
+</body>
+
+</html>
